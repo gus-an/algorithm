@@ -21,7 +21,9 @@
 |29380KB|64ms|
 
 ### jack
-- 
+
+- https://www.acmicpc.net/problem/1261
+  
 |메모리|시간|
 |--|--|
 |31824KB|232ms|
