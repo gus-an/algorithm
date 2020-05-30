@@ -7,7 +7,15 @@
 -
 
 ### gus
--
+
+- https://www.acmicpc.net/problem/2869
+
+- 이분탐색 어렵다 ;;;ㅍ
+  
+|메모리|시간|
+|--|--|
+|31844KB|308ms|
+
 
 ### jack
 
