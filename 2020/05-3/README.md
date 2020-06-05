@@ -11,7 +11,21 @@
 
 |메모리|시간|누구|
 |--|--|--|
-|31848KB|112ms|hc|
+|<del>31848KB|<del>112ms|<del>hc|
+|29380KB|60ms|gus|
+
+- Improvement
+  - gus
+    - Queue 안쓰고 규칙을 찾아서 List로 구현
+    - 시간복잡도 O(N)
+- Lessons Learned
+    1. index 계산할 때, 현재 배열을 초과하여 생각하면 편함
+        ```
+        a = [1, 2, 3]
+        5번째 값을 구한다면?
+        a[5 - len(a)]
+        ```
+    1. index를 생각할 때, 1부터 세고 싶으면 실질적인 함수를 콜 할때 `pop(i-1)` 처럼 1을 빼주면 생각하기 편함
 
 ### gus
 - https://www.acmicpc.net/problem/13699

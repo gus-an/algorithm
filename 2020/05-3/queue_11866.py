@@ -1,30 +1,33 @@
-from collections import deque
-
-def solution(N, K):
-    answer = "<"
-    idx = 0
-
-    q=deque()
-
-    for i in range (0, N):
-        q.appendleft(i + 1)
-
-    while True:
-        idx += 1
-
-        for i in range (0, K - 1):
-            q.appendleft(q.pop())
-
-        answer += str(q.pop()) + ", "
-        
-        if (idx == N):
-            answer = answer[0 : -2]
-            answer += ">"
-            break
-    
-    return answer
-
 if __name__ == "__main__":
-    N, K = map(int, input().split())
+    N, J = map(int, input().split())
+    a = list(range(1, N+1))
+    b = []
 
-    print(solution(N, K))
+    alen = len(a)
+    i = J
+    while alen >= J: 
+        pop = 0
+        while i <= alen:
+            b.append(a.pop(i - 1 - pop))
+            i += J
+            pop += 1
+        i = i - alen
+        alen = len(a)
+
+    while alen > 0:
+        # print('a', a, 'b', b, 'alen', alen, 'i', i)
+        while i > alen:
+            i = i - alen
+        # print(i)
+        b.append(a.pop(i - 1))
+        i += J - alen
+        alen = len(a)
+
+    sol = "<"
+    for idx, val in enumerate(b):
+        if idx + 1 == len(b):
+            sol = sol + str(val) + '>'
+        else:
+            sol = sol + str(val) + ', '
+    
+    print(sol)
