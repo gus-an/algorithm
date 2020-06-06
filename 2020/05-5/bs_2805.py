@@ -16,20 +16,15 @@ def BS(start, end, N, M):
         return
     mid = (start + end) // 2
     bal = cutTrees(mid, N)
-    print(start, end, mid, bal)
+
     if bal >= M and bal - M < diff and mid > pos:
         pos = mid
         diff = abs(M - bal)
-        print("change")
-        
     
-    if bal == M:
+    if bal >= M:
         return BS(mid + 1, end, N, M)
     elif bal < M:
         return BS(start, mid - 1, N, M)
-    elif bal > M:
-        return BS(mid + 1, end, N, M)
-
 
 if __name__ == "__main__": 
     N, M = map(int, input().split())
