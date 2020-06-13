@@ -2,7 +2,14 @@
 
 ### hc
 
-- 
+- https://www.acmicpc.net/problem/2630
+
+|메모리|시간|누구|
+|--|--|--|
+|29380KB|96ms|Hyeongcheol-An|
+
+- Lessons Learned
+  - Divide and Conquer (분할정복)
 
 ### gus
 
