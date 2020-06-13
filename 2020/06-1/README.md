@@ -9,11 +9,7 @@
 |29380KB|96ms|Hyeongcheol-An|
 
 - Lessons Learned
-  - Divide and Conquer (분할정복)
-
-### gus
-
-- 
+  - Divide and Conquer (분할정복) 
 
 ### jack
 
